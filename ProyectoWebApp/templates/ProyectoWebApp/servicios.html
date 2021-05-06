@@ -2,5 +2,14 @@
 {% load static %}
 {% block content %}
 
+    {% for servicio in servicios %}
+        <div>
+            <p>
+                <h2 style="color:white">{{servicio.titulo}}</h2>
+                <h2 style="color:white">{{servicio.contenido}}</h2>
+                <img src="{{servicio.imagen.url}}"> <!-- el .url es para que cargue la imagen-->
+            </p>
+        </div>
+    {% endfor %}
 
 {% endblock %}
