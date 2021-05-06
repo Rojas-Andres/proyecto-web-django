@@ -9,7 +9,7 @@ class Categoria(models.Model):
         verbose_name = 'categoria' # El nombre que va a tener en la base de datos 
         verbose_name_plural="categorias"    
     def __str__(self):
-        return "El nombre es {} ".format(self.nombre)
+        return self.nombre
 
 
 class Post(models.Model):
