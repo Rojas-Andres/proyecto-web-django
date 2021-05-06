@@ -4,11 +4,6 @@ from servicios.models import Servicio
 def home(req):
     return render(req,"ProyectoWebApp/home.html")
 
-def servicios(req):
-    servicios = Servicio.objects.all() # Traiga todos los servicios que esten creados
-
-    return render(req,"ProyectoWebApp/servicios.html",{"servicios":servicios})
-
 def tienda(req):
     return render(req,"ProyectoWebApp/tienda.html")
 

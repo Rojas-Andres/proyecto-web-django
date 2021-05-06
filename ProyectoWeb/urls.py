@@ -19,5 +19,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('ProyectoWebApp.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
     path('servicios/',include('servicios.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
+    path('blog/',include('blog.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
 
 ]
