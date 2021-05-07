@@ -12,6 +12,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+
+
+#Abrimos el archivo correo_contrasena_email.txt
+with open('correo_contrasena_email.txt') as f:
+    lineas = f.readlines()
+#Eliminamos el salto de linea
+correo = lineas[0].rstrip("\n")
+contrasena = lineas[1].rstrip("\n")
+
+#Descomentar la siguiente linea si desea saber como llega el correo y contraseña
+#print("El correo es : {} y la contraseña es : {} ".format(correo,contrasena))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -142,3 +153,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Los archivos media deben de ir en la carpeta media
 MEDIA_URL="/media/"
 MEDIA_ROOT=BASE_DIR / 'media'
+
+# configuracion de email para el envio de correo
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS=True # Autenticacion
+EMAIL_PORT=587
+EMAIL_HOST_USER=correo # Aca esta el correo
+EMAIL_HOST_PASSWORD=contrasena #aca esta la contraseña
