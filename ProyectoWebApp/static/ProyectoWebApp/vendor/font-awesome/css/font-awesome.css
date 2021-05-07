@@ -2335,3 +2335,6 @@
   overflow: visible;
   clip: auto;
 }
+.ContenedorFormulario{
+  background-color: rgba(24, 64, 8)
+}

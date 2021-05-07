@@ -1,11 +1,25 @@
 {% extends "ProyectoWebApp/base.html" %}
-
 {% load static %}
+
+
 {% block content %}
 
-<div>
-    <p style="color:white">
-        {{miFormulario}}
-    </p>
+<div class="ContenedorFormulario" >
+
+    {% if "valido" in request.GET %}
+
+
+        <p style="color: white;"> Informacion enviada correctamente</p>
+
+    {% endif %}
+    
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %} <!--Agrega un campo oculto para la validacion a modo de clave -->
+        <table style="color: white; margin: 20px auto;">
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit" value="Enviar" style="width:150px;">
+    </form>
+
 </div>
 {% endblock %}

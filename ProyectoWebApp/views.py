@@ -7,7 +7,3 @@ def home(req):
 def tienda(req):
     return render(req,"ProyectoWebApp/tienda.html")
 
-'''
-def contacto(req):
-    return render(req,"ProyectoWebApp/contacto.html")
-'''
