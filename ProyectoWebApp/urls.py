@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.home,name="Home"),
     path('tienda/', views.tienda,name="Tienda"),
     #path('blog/', views.blog,name="Blog"),
-    path('contacto/', views.contacto,name="Contacto"),
+    #path('contacto/', views.contacto,name="Contacto"),
 ]
 
 urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT) # Le agregamos la ruta para que cuando entremos a mirarla se encuentre la img
