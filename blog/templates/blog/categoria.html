@@ -28,9 +28,10 @@
             Categorias:
             {% for post in posts %}
                 {% for categoria in post.categorias.all %}
-                    {{categoria.nombre}} &nbsp; <!--&nbsp; -> espacios horizontales-->
+                 <a href="{% url 'categoria' categoria.id %}" style="color: white; text-decoration: underline;">{{categoria.nombre}}</a>
                 {% endfor %}
             {% endfor %}
         </div>
     </section>
+
 {% endblock %}

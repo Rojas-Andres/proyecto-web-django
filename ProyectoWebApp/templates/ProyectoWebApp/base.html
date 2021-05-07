@@ -46,7 +46,8 @@
           <li class="nav-item {% if request.path == '/contacto/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
           </li>
-          <li class="nav-item {% if request.path == '/blog/' %}active{% endif %} px-lg-4">
+          <!--Si los primeros 6 caracteres comienza con blog entonces subraye el blog porque estamos en blog-->
+          <li class="nav-item {% if request.path|slice:':6' == '/blog/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
           </li>
          
