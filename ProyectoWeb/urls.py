@@ -21,5 +21,6 @@ urlpatterns = [
     path('servicios/',include('servicios.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
     path('blog/',include('blog.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
     path('contacto/',include('contacto.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
+    path('tienda/',include('tienda.urls')), # Traiga todas las urls del proyecto ProyectoWebApp
 
 ]
