@@ -2,7 +2,13 @@
 {% load static %}
 {% block content %}
 <div class="container">
+    
+    <div style="float: right; ">
+        <p style="color: aqua;">as</p>
+    </div>
+
     <div class="row">
+
         {% for producto in productos %}
 
             <div class="col-md-3">
@@ -13,9 +19,16 @@
 
                         <h6 class="card-title">{{producto.nombre}}</h6>
                         <p class="card-text">{{producto.precio}}</p>
-                       
-                    </div>
                     
+                    </div>
+
+                    <div class="card-footer text-center">
+
+                        <a href="#" class="btn btn-success">Agregar al carro</a>
+                        <a href="#" class="btn btn-danger">Eliminar del carro</a>
+
+                    </div>
+
                 </div>
             </div>
 
